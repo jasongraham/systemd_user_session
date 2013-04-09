@@ -1,0 +1,11 @@
+[Unit]
+Description=Gnome Keyring Daemon
+Requires=dbus.socket
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
+Restart=always
+
+[Install]
+WantedBy=mystuff.target

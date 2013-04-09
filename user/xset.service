@@ -1,0 +1,14 @@
+[Unit]
+Description=xset
+Requires=xorg.target
+After=xorg.target
+Before=xmonad.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xsetroot -cursor_name left_ptr
+ExecStart=/usr/bin/xset -dpms
+ExecStart=/usr/bin/xset s 0 0
+
+[Install]
+WantedBy=mystuff.target

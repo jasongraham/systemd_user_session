@@ -1,0 +1,9 @@
+[Unit]
+Description=Thunar Daemon
+Requires=dbus.socket
+
+[Service]
+ExecStart=/usr/bin/thunar --daemon
+
+[Install]
+WantedBy=mystuff.target

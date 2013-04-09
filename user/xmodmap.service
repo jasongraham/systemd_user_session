@@ -1,0 +1,13 @@
+[Unit]
+Description=xmodmap
+Requires=xorg.target
+After=xorg.target
+Before=xmonad.service
+
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xmodmap %h/.xmodmap
+
+[Install]
+WantedBy=mystuff.target

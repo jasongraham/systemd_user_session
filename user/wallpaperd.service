@@ -1,0 +1,10 @@
+[Unit]
+Description=Randomizes my wallpaper
+Requires=wm.target
+After=wm.target
+
+[Service]
+ExecStart=/home/grahjm2a/bin/wallpaper.sh
+
+[Install]
+WantedBy=mystuff.target
