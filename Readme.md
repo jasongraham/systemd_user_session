@@ -15,11 +15,14 @@ For more useful instructions, see the link above or the [Arch Wiki][] article.
 
 2. Install (or link) this repository to the location `$HOME/.config/systemd`.
 
-3. Edit your `$HOME/.xinitrc` to include `/bin/systemd --user` at the end.
+3. Edit (backup first) your `$HOME/.xinitrc` to include `/bin/systemd --user` at the end.
 
-4. Add `session    required    pam_systemd.so` to `/etc/pam.d/login and /etc/pam.d/system-auth`.
+4. Add `session    required    pam_systemd.so` to `/etc/pam.d/login` and `/etc/pam.d/system-auth`.
 
 5. Enable the unit files you want handled by systemd through `systemctl --user enable whatever`.
+
+6. Reboot and pray it works. If not, debugging is fun, right? What, where are
+   you going?
 
 [KaiSforza]:https://bitbucket.org/KaiSforza/systemd-user-units/src
 [Arch Wiki]:https://wiki.archlinux.org/index.php/Systemd/User
