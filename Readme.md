@@ -3,7 +3,8 @@
 This repository contains systemd user session unit files.
 
 Many are based on the excellent examples done by [KaiSforza][], who also does
-much more with his.  See the link for a much more thorough explanation of what to do.
+much more with his.  See the link for a much more thorough explanation of what
+to do.
 
 ## What to do ##
 
@@ -11,15 +12,22 @@ On Arch Linux, using the slim login manager, I did the following and it works.
 
 For more useful instructions, see the link above or the [Arch Wiki][] article.
 
-1. Install [xorg-launch-helper][] from the AUR.
+1. (Optional, only do this if you aren't using a login manager) Install
+   [xorg-launch-helper][] from the AUR.  For me, when I did this while using
+   slim, it filled my log with errors about how X was already running and this
+   tried to start a new X server every 10 seconds. Also caused the login
+   process to be delayed those first 10 seconds while it tried to start.
 
 2. Install (or link) this repository to the location `$HOME/.config/systemd`.
 
-3. Edit (backup first) your `$HOME/.xinitrc` to include `/bin/systemd --user` at the end.
+3. Edit (backup first) your `$HOME/.xinitrc` to include `/bin/systemd --user`
+   at the end.
 
-4. Add `session    required    pam_systemd.so` to `/etc/pam.d/login` and `/etc/pam.d/system-auth`.
+4. Add `session    required    pam_systemd.so` to `/etc/pam.d/login` and
+   `/etc/pam.d/system-auth`.
 
-5. Enable the unit files you want handled by systemd through `systemctl --user enable whatever`.
+5. Enable the unit files you want handled by systemd through `systemctl --user
+   enable whatever`.
 
 6. Reboot and pray it works. If not, debugging is fun, right? What, where are
    you going?

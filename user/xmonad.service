@@ -1,8 +1,9 @@
 [Unit]
 Description=Lightweight X11 tiled window manager written in Haskell
 Before=mystuff.target
-After=xorg.target
-Requires=xorg.target
+#Only needed if not using a login manager
+#After=xorg.target
+#Requires=xorg.target
 
 [Service]
 ExecStart=/usr/bin/xmonad

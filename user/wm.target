@@ -1,6 +1,7 @@
 [Unit]
 Description=Window manager target
-Wants=xorg.target
+#Use only if not using a graphical login manager
+#Wants=xorg.target
 Wants=mystuff.target
 Requires=dbus.socket
 AllowIsolate=true
