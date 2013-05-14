@@ -20,8 +20,8 @@ For more useful instructions, see the link above or the [Arch Wiki][] article.
 
 2. Install (or link) this repository to the location `$HOME/.config/systemd`.
 
-3. Edit (backup first) your `$HOME/.xinitrc` to include `/bin/systemd --user`
-   at the end.
+3. Edit (backup first) your `$HOME/.xinitrc` to include
+   `/usr/lib/systemd/systemd --user` at the end.
 
 4. Add `session    required    pam_systemd.so` to `/etc/pam.d/login` and
    `/etc/pam.d/system-auth`.
