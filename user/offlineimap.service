@@ -5,8 +5,6 @@ Description=Start offlineimap as a daemon
 Type=simple
 EnvironmentFile=%h/.Xdbus
 ExecStart=/usr/bin/offlineimap -u Quiet
-Restart=always
 
 [Install]
-# TODO: Change this to run off of a timer
-WantedBy=mystuff.target
+WantedBy=10_minute.timer

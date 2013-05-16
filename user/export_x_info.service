@@ -1,7 +1,7 @@
 [Unit]
 Description=Exports X Info for cron
-Requires=dbus.socket
-After=gnome-keyring.service
+Requires=dbus.socket gnome-keyring.service
+After=env.target
 
 [Service]
 Type=oneshot
