@@ -1,7 +1,8 @@
 [Unit]
 Description=xrdb
-Requires=xorg.target
-After=xorg.target
+# Only needed if not using a graphical login manager
+#Requires=xorg.target
+#After=xorg.target
 Before=xmonad.service
 
 [Service]

@@ -12,11 +12,8 @@ On Arch Linux, using the slim login manager, I did the following and it works.
 
 For more useful instructions, see the link above or the [Arch Wiki][] article.
 
-1. (Optional, only do this if you aren't using a login manager) Install
-   [xorg-launch-helper][] from the AUR.  For me, when I did this while using
-   slim, it filled my log with errors about how X was already running and this
-   tried to start a new X server every 10 seconds. Also caused the login
-   process to be delayed those first 10 seconds while it tried to start.
+1. Install [user-session-units][] from the AUR.  We need this for our dbus
+   socket.
 
 2. Install (or link) this repository to the location `$HOME/.config/systemd`.
 
@@ -34,4 +31,4 @@ For more useful instructions, see the link above or the [Arch Wiki][] article.
 
 [KaiSforza]:https://bitbucket.org/KaiSforza/systemd-user-units/src
 [Arch Wiki]:https://wiki.archlinux.org/index.php/Systemd/User
-[xorg-launch-helper]:https://aur.archlinux.org/packages/xorg-launch-helper/
+[user-session-units]:https://github.com/sofar/user-session-units
