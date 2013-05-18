@@ -1,5 +1,7 @@
 [Unit]
 Description=Start offlineimap as a daemon
+Requires=gnome-keyring.service
+After=gnome-keyring.service
 
 [Service]
 Type=simple

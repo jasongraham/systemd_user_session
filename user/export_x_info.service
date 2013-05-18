@@ -1,7 +1,9 @@
 [Unit]
 Description=Exports X Info for cron
-Requires=dbus.socket gnome-keyring.service
-After=env.target
+Requires=dbus.socket
+Wants=env.target
+Before=env.target
+After=dbus.socket
 
 [Service]
 Type=oneshot
@@ -9,4 +11,4 @@ RemainAfterExit=yes
 ExecStart=/home/grahjm2a/bin/export_x_info.sh
 
 [Install]
-WantedBy=mystuff.target
+WantedBy=env.target

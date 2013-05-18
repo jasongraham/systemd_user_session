@@ -3,8 +3,9 @@
 [Unit]
 Description=Gnome Keyring Daemon
 Requires=dbus.socket
-After=dbus.socket
+Wants=env.target
 Before=env.target
+After=dbus.socket
 
 [Service]
 Type=oneshot
@@ -13,4 +14,4 @@ ExecStop=/bin/sh -c "for env in GNOME_KEYRING_PID GNOME_KEYRING_CONTROL SSH_AUTH
 RemainAfterExit=yes
 
 [Install]
-WantedBy=mystuff.target
+WantedBy=env.target
