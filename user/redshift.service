@@ -1,0 +1,8 @@
+[Unit]
+Description=Changes desktop color warmth at night
+
+[Service]
+ExecStart=/usr/bin/redshift -l 46.7:-117.2 -t 6500:5300
+
+[Install]
+WantedBy=mystuff.target
