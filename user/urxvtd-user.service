@@ -1,7 +1,6 @@
 [Unit]
 Description=Urxvt Daemon
 After=env.target
-Wants=env.target
 
 [Service]
 ExecStart=/usr/bin/urxvtd

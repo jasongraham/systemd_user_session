@@ -3,8 +3,6 @@
 [Unit]
 Description=Gnome Keyring Daemon
 Requires=dbus.socket
-Wants=env.target
-Before=env.target
 After=dbus.socket
 
 [Service]

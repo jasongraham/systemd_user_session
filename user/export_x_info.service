@@ -1,9 +1,6 @@
 [Unit]
 Description=Exports X Info for cron
-Requires=dbus.socket
-Wants=env.target
-Before=env.target
-After=dbus.socket
+After=env.target
 
 [Service]
 Type=oneshot
@@ -11,4 +8,4 @@ RemainAfterExit=yes
 ExecStart=/home/grahjm2a/bin/export_x_info.sh
 
 [Install]
-WantedBy=env.target
+WantedBy=mystuff.target
